@@ -84,6 +84,9 @@ class Pet {
 
     int yearDiff = now.year - birthday.year;
     int monthDiff = now.month - birthday.month;
+    if (now.day < birthday.day) {
+      monthDiff -= 1;
+    }
     if (monthDiff < 0) {
       yearDiff -= 1;
       monthDiff += 12;
